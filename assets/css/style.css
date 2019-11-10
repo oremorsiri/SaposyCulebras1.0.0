@@ -37,6 +37,7 @@ section {
 .menu {
     animation: moverIzquierda 1s ease-in;
     z-index: 100;
+    cursor: pointer;
 }
 
 .botonInicio {
