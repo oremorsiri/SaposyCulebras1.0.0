@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,16 +14,10 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="#" id="menu" class="menu">Menú</a>
-            <button id="botonMusica" class="menu">Play</button>
-            <div class="enlaces cerrado" id="enlaces">
-                <a href="">Inicio</a>
-                <a href="">Acerca de</a>
-                <a href="">Contacto</a>
-            </div>
-        </nav>
+    <section>
+
+    <?php require 'partials/header.php' ?>
+
         <div class="container">
             <div class="textos">
                 <h1>Sapos y culebras</h1>
@@ -35,17 +30,13 @@
                 <img src="assets/media/witch-cauldron.png" alt="Caldero de bruja con ingredientes alrededor">
             </div>
         </div>
-    </header>
-    <div class="wave">
-        <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                style="height: 100%; width: 100%;">
-                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: black;"></path>
-            </svg></div>
-            <audio class="audio" src="assets/media/AbuseInTheOrphanage.ogg">  
-                Tu navegador no soporta el elemento <code>audio</code>.  
-              </audio>
-    </div>
+    </section>
+
+    <?php require 'partials/wave.php' ?>
+
+    <!-- <audio class="audio" src="assets/media/AbuseInTheOrphanage.ogg">
+        Tu navegador no soporta el elemento <code>audio</code>.
+    </audio> -->
     <script src="assets/javascript/script.js"></script>
 </body>
 

@@ -22,7 +22,7 @@ nav a {
     text-decoration: none;
 }
 
-header {
+section {
     background: #F0C27B;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #4B1248, #F0C27B);
@@ -39,7 +39,7 @@ header {
     z-index: 100;
 }
 
-.botonInicio { 
+.botonInicio {
     margin: 10px;
 }
 
@@ -165,18 +165,20 @@ img {
 }
 
 @media screen and (max-width:1000px) {
-    img { 
+    img {
         height: 400px;
     }
 }
 
 @media screen and (max-width:800px) {
-    img { 
+    img {
         height: 370px;
     }
+
     .textos h1 {
         font-size: 60px;
     }
+
     .textos h2 {
         font-size: 15px;
     }
@@ -187,9 +189,10 @@ img {
 }
 
 @media screen and (max-width:700px) {
-    img { 
+    img {
         height: 250px;
     }
+
     .textos h1 {
         font-size: 50px;
     }
@@ -202,7 +205,7 @@ img {
         justify-content: center;
     }
 
-    img { 
+    img {
         height: 250px;
     }
 
@@ -219,7 +222,7 @@ img {
         justify-content: center;
     }
 
-    img { 
+    img {
         height: 160px;
     }
 
@@ -231,6 +234,7 @@ img {
     .textos h1 {
         font-size: 25px;
     }
+
     .textos h2 {
         font-size: 10px;
     }

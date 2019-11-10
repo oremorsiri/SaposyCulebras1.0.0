@@ -15,19 +15,19 @@ boton.addEventListener("click", function (event) {
     }
 });
 
-// Botón On / Off música
-let cancion = document.getElementsByTagName("audio")[0];
-let botonMusica = document.getElementById("botonMusica");
-let sonido = false;
+// // Botón On / Off música
+// let cancion = document.getElementsByTagName("audio")[0];
+// let botonMusica = document.getElementById("botonMusica");
+// let sonido = false;
 
-botonMusica.addEventListener("click", function () {
-    if (!sonido) {
-        cancion.play();
-        this.innerHTML = "Pause";
-        sonido = true;
-    } else {
-        cancion.pause();
-        this.innerHTML = "Play";
-        sonido = false;
-    }
-});
+// botonMusica.addEventListener("click", function () {
+//     if (!sonido) {
+//         cancion.play();
+//         this.innerHTML = "Pause";
+//         sonido = true;
+//     } else {
+//         cancion.pause();
+//         this.innerHTML = "Play";
+//         sonido = false;
+//     }
+// });
