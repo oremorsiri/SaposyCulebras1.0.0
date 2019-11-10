@@ -8,7 +8,7 @@
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="assets/css/general.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Sign Up</title>
 </head>
 
@@ -16,18 +16,19 @@
     
     <?php require 'partials/header.php' ?>
     
-    <h1>Únete al aquelarre</h1>
-    <span>or <a href="login.php">Login</a></span>
-
-    <form action="signup.php" method="POST">
-        <input name="email" type="text" placeholder="Introduce tu email">
-        <input name="password" type="password" placeholder="Introduce tu password">
-        <input name="confirm_password" type="password" placeholder="Confirma tu password">
-        <input type="submit" value="Submit">
-    </form>
-
+    <section class="forms">
+        <h1>Únete al aquelarre</h1>
+        <span>or <a href="login.php">Login</a></span>
+        
+        <form action="signup.php" method="POST">
+            <input name="email" type="text" placeholder="Introduce tu email">
+            <input name="password" type="password" placeholder="Introduce tu password">
+            <input name="confirm_password" type="password" placeholder="Confirma tu password">
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+        
     <?php require 'partials/wave.php' ?>
-
 </body>
 
 </html>

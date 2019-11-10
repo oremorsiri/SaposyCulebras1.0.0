@@ -1,0 +1,54 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* HEADER */
+nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu {
+    animation: moverIzquierda 1s ease-in;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.enlaces {
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    transition: all 1s ease;
+    background: #F0C27B;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F0C27B, #4B1248);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F0C27B, #4B1248);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.cerrado {
+    clip-path: circle(0.0% at 3% 3%);
+}
+
+.abierto {
+    clip-path: circle(150% at 3% 3%);
+}

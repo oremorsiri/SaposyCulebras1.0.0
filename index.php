@@ -22,9 +22,9 @@
             <div class="textos">
                 <h1>Sapos y culebras</h1>
                 <h2>Pócimas y encantamientos a domicilio online cerca de ti</h2>
-                <a href="login.php">Bienvenida de nuevo</a>
+                <a class="botonInicio" href="login.php">Bienvenida de nuevo</a>
                 <a class="botonInicio" href="signup.php">Únete al aquelarre</a>
-                <!-- <a href="#">Busca tu bruja más cercana</a> -->
+                <!-- <a class="botonInicio" href="#">Busca tu bruja más cercana</a> -->
             </div>
             <div>
                 <img src="assets/media/witch-cauldron.png" alt="Caldero de bruja con ingredientes alrededor">
@@ -32,12 +32,11 @@
         </div>
     </section>
 
-    <?php require 'partials/wave.php' ?>
-
     <!-- <audio class="audio" src="assets/media/AbuseInTheOrphanage.ogg">
         Tu navegador no soporta el elemento <code>audio</code>.
     </audio> -->
-    <script src="assets/javascript/script.js"></script>
+    <?php require 'partials/wave.php' ?>
+    
 </body>
 
 </html>
