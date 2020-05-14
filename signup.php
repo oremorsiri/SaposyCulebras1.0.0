@@ -3,16 +3,23 @@
     require 'database.php';
 
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
-        $sql = "INSERT INTO brujas (email, password) VALUES (:email, :password)";
-        $stmt = $connection->prepare($sql);
-        $stmt->bindParam(':email', $_POST['email']);
-        $password_hash = password_hash($_POST['password'], PASSWORD_BCRYPT);
-        $stmt->bindParam(':password', $password_hash);
 
-        if ($stmt->execute()) {
-            $message = 'Bienvenida al aquelarre';
+        if($_POST['password'] == $_POST['confirm_password']) {
+
+            $sql = "INSERT INTO brujas (email, password) VALUES (:email, :password)";
+            $stmt = $connection->prepare($sql);
+            $stmt->bindParam(':email', $_POST['email']);
+            $password_hash = password_hash($_POST['password'], PASSWORD_BCRYPT);
+            $stmt->bindParam(':password', $password_hash);
+
+            if ($stmt->execute()) {
+                $message = 'Bienvenida al aquelarre';
+            } else {
+                $message = 'Rayos y retruecanos, alguna fuerza maligna ha impedido tu unión';
+            }
+        
         } else {
-            $message = 'Rayos y retruecanos, alguna fuerza maligna ha impedido tu unión';
+            $message = 'El santo y seña no coincide.';
         }
         
     }
