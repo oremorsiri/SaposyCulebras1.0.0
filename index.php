@@ -42,9 +42,17 @@
             <div class="textos">
                 <h1>Sapos y culebras</h1>
                 <h2>Pócimas y encantamientos a domicilio online cerca de ti</h2>
-                <a class="botonInicio" href="login.php">Bienvenida de nuevo</a>
-                <a class="botonInicio" href="signup.php">Únete al aquelarre</a>
-                <!-- <a class="botonInicio" href="#">Busca tu bruja más cercana</a> -->
+
+                <?php if(empty($user)): ?>
+                    <a class="botonInicio" href="login.php">Bienvenida de nuevo</a>
+                    <a class="botonInicio" href="signup.php">Únete al aquelarre</a>
+                    <a class="botonInicio" href="#">Encuentra tu bruja más cercana</a>
+
+                <?php else: ?>
+                    <p>Bienvenida <?= $user['email']; ?></p>
+                    <a class="botonInicio" href="#">Comprueba tus encargos</a>
+                    <a href="logout.php">Logout</a>
+                <?php endif; ?>
             </div>
             <div>
                 <img src="assets/media/witch-cauldron.png" alt="Caldero de bruja con ingredientes alrededor">
