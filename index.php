@@ -1,3 +1,23 @@
+<?php
+
+  session_start();
+
+  require 'database.php';
+
+  if (isset($_SESSION['user_id'])) {
+    $query = $connection->prepare('SELECT id, email, password FROM brujas WHERE id = :id');
+    $query->bindParam(':id', $_SESSION['user_id']);
+    $query->execute();
+    $results = $query->fetch(PDO::FETCH_ASSOC);
+
+    $user = null;
+
+    if (count($results) > 0) {
+      $user = $results;
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
