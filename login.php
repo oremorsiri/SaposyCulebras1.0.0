@@ -1,3 +1,31 @@
+<?php
+
+  session_start();
+
+  if (isset($_SESSION['user_id'])) {
+    header('Location: index.php');
+  }
+
+  require 'database.php';
+
+  if (!empty($_POST['email']) && !empty($_POST['password'])) {
+    $query = $connection->prepare('SELECT id, email, password FROM brujas WHERE email = :email');
+    $query->bindParam(':email', $_POST['email']);
+    $query->execute();
+    $results = $query->fetch(PDO::FETCH_ASSOC);
+
+    $message = '';
+
+    if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
+      $_SESSION['user_id'] = $results['id'];
+      header("Location: index.php");
+    } else {
+      $message = 'Lo sentimos, el santo y seña es incorrecto.';
+    }
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +43,10 @@
 <body>
     
     <?php require 'partials/header.php' ?>
+
+    <?php if(!empty($message)): ?>
+        <p> <?= $message ?></p>
+    <?php endif; ?>
 
     <section class="forms">
         <h1>Bienvenida de nuevo</h1>
